@@ -144,3 +144,9 @@ int Display_PrintString(int x, int row, char* str) {
 		str++;
 	}
 }
+
+void Display_ClearLine(int row) {
+	for (int i = 0; i < 64; i++) {
+		displayBuffer[row * 64 + i] = 0x00;
+	}
+}
